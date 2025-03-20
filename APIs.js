@@ -3,7 +3,7 @@ const cors = require('cors'); // Habilitar CORS
 const sqlite3 = require('sqlite3').verbose();
 const path = require('path');
 const app = express();
-const port = 3000;
+const port = 8080;
 
 // Middleware para habilitar CORS
 app.use(cors());

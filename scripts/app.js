@@ -2,9 +2,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const form = document.getElementById('productForm');
     const messageBox = document.querySelector('.message');
 
-    // Função para lidar com o envio do formulário
     form.addEventListener('submit', function(e) {
-        e.preventDefault(); // Previne o envio do formulário padrão
+        e.preventDefault(); 
 
         const produto = {
             nome: document.getElementById('nome').value,
@@ -13,7 +12,7 @@ document.addEventListener('DOMContentLoaded', function() {
             categoria: document.getElementById('categoria').value
         };
 
-        // Chamada para a API com o método POST
+ 
         fetch('http://localhost:3000/produtos', {
             method: 'POST',
             headers: {
@@ -24,7 +23,7 @@ document.addEventListener('DOMContentLoaded', function() {
         .then(response => response.json())
         .then(data => {
             messageBox.innerHTML = `<p>Produto cadastrado com sucesso! ID: ${data.id}</p>`;
-            form.reset(); // Limpar o formulário
+            form.reset();
         })
         .catch(error => {
             messageBox.innerHTML = `<p style="color: red;">Erro ao cadastrar produto. Tente novamente.</p>`;
@@ -32,3 +31,14 @@ document.addEventListener('DOMContentLoaded', function() {
         });
     });
 });
+const hamburgerMenu = document.getElementById('hamburger-menu');
+const navMenu = document.getElementById('nav-menu');
+
+hamburgerMenu.addEventListener('click', () => {
+  navMenu.style.right = navMenu.style.right === '0px' ? '-250px' : '0px';
+});
+document.getElementById('hamburger').addEventListener('click', function() {
+    const navMenu = document.getElementById('nav-menu');
+    navMenu.classList.toggle('active');
+  });
+  

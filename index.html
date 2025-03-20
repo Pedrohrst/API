@@ -1,26 +1,30 @@
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cadastrar Produto</title>
-    <link rel="stylesheet" href="assets/style.css"> <!-- Linkando o arquivo CSS -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Página Principal</title>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <header>
+    <div class="logo">Logo</div>
+    <nav class="main-nav">
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Sobre nós</a></li>
+        <li><a href="#">Contato</a></li>
+        <li><a href="#">Produtos</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <h2>Cadastrar Produto</h2>
-    <form id="productForm">
-        <input type="text" id="nome" placeholder="Nome do Produto" required><br>
-        <input type="text" id="descricao" placeholder="Descrição do Produto" required><br>
-        <input type="number" step="0.01" id="preco" placeholder="Preço do Produto" required><br>
-        <input type="text" id="categoria" placeholder="Categoria do Produto" required><br>
-        <button type="submit">Cadastrar Produto</button>
-    </form>
+  <main>
+    <h1>Bem-vindo à nossa empresa!</h1>
+    <p>Aqui você encontrará os melhores produtos para o seu negócio. Navegue pelos nossos links acima para explorar mais.</p>
+  </main>
 
-    <div class="message"></div>
-
-    <!-- Linkando o arquivo JavaScript -->
-    <script src="scripts/app.js"></script>
-
-</body>
-</html>
+  <footer>
+    <p>&copy; 2025 Nome da Empresa - Todos os direitos reservados.</p>
+  </footer>
+</
